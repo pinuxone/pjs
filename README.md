@@ -20,7 +20,7 @@ _.ajax ({
 });
 
 La variabile json "data" passata alla funzione ajax, contiene i parametri 
-che verranno codificati come url prima di essere utilizzati
+che verranno codificati come url prima di essere utilizzati;
 Se / quando la funzione ajax dovesse avere successo e quindi ritornare
 con un oggetto json, verrà richiamata la funzione specificata con success:
 mentre il parametro x assumerà il valore dell'oggetto json ritornato.
