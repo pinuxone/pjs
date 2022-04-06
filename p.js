@@ -3,19 +3,19 @@ Autore: Giuseppe Latini => giuseppe.latini AT gmail.com
 Oggetto: p.js => Framework Javascript minimale per gestire chiamate ajax
 Scopo: evitare pesanti framework, a vantaggio della velocità di caricamento
 Data inizio stesura: 31/03/2022
-Rel: 0.1 - Data release: 02/04/2022
+Rel: 0.2 - Data release: 06/04/2022
 */
 'use strict';
 var _ = {
 
-    version: 0.1,
+    version: 0.2,
 
     ver: function () {
         return (this.version);
     },
 
     name: function(name, progr=0) {
-        return document.getElementsByName('csrfmiddlewaretoken')[progr];
+        return document.getElementsByName(name)[progr];
     },
 
     id: function (id) {
@@ -58,10 +58,9 @@ var _ = {
         r.open(p.type, url, true);
         // header per specificare che sto inviando un form con paramtri codificati come url
         r.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        // header per specificare si tratta di una chiamata ajax
+        // header per specificare che si tratta di una chiamata ajax
         r.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-        // effettuo la chiamata ajax passando i parametri url enconded
+        // effettuo la chiamata ajax passando i parametri url encoded
         r.send(u);
     }
 }
-
