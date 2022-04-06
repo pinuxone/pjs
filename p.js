@@ -19,7 +19,7 @@ var _ = {
     },
 
     id: function (id) {
-        return document.getElementBy(Id);
+        return document.getElementById(id);
     },
 
     // Istanzia oggetto xhr
